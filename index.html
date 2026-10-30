@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Gandin Calero Armijos | Ingeniero de Ciencias de la Computación / Consultor IA / Capacitador</title>
-    <!-- Iconos para redes académicas y profesionales -->
+    <title>Jonathan Gandin Calero Armijos | Ingeniero de Ciencias de la Computación / Consultor IA</title>
+    <!-- Enlace de iconos corregido -->
     <link rel="stylesheet" href="https://cloudflare.com">
-
     <style>
         :root {
             --primary: #0f172a;
@@ -54,7 +53,6 @@
             padding: 0 24px;
         }
 
-        /* Navbar */
         header {
             background-color: rgba(255, 255, 255, 0.95);
             border-bottom: 1px solid var(--border);
@@ -90,30 +88,6 @@
             font-size: 0.95rem;
         }
 
-        .nav-menu a:hover {
-            color: var(--brand-light);
-        }
-
-        .lang-selector {
-            display: flex;
-            gap: 8px;
-            border-left: 1px solid var(--border);
-            padding-left: 16px;
-            margin-left: 8px;
-            font-size: 0.85rem;
-            font-weight: bold;
-        }
-
-        .lang-selector a {
-            color: var(--text-muted);
-        }
-
-        .lang-selector a.active {
-            color: var(--primary);
-            text-decoration: underline;
-        }
-
-        /* Hero */
         .hero {
             background-color: #ffffff;
             padding: 80px 0;
@@ -128,7 +102,7 @@
         }
 
         .hero-content h1 {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             color: var(--primary);
             line-height: 1.2;
             margin-bottom: 10px;
@@ -155,11 +129,6 @@
             font-style: italic;
         }
 
-        .btn-group {
-            display: flex;
-            gap: 15px;
-        }
-
         .btn {
             display: inline-flex;
             align-items: center;
@@ -167,47 +136,15 @@
             border-radius: 6px;
             font-weight: 600;
             font-size: 0.95rem;
-            cursor: pointer;
+            background-color: var(--brand);
+            color: white;
             transition: all 0.2s ease;
         }
 
-        .btn-primary {
-            background-color: var(--brand);
-            color: white;
-        }
-
-        .btn-primary:hover {
+        .btn:hover {
             background-color: var(--brand-light);
         }
 
-        .btn-secondary {
-            background-color: var(--bg-main);
-            color: var(--primary);
-            border: 1px solid var(--border);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--border);
-        }
-
-        .hero-img-box {
-            text-align: center;
-        }
-
-        .hero-img-box img {
-            width: 100%;
-            max-width: 340px;
-            border-radius: 12px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-        }
-
-        .img-caption {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 10px;
-        }
-
-        /* Sections General */
         section {
             padding: 80px 0;
             border-bottom: 1px solid var(--border);
@@ -220,7 +157,7 @@
         .section-title {
             font-size: 1.8rem;
             color: var(--primary);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             position: relative;
         }
 
@@ -234,184 +171,100 @@
             background-color: var(--brand-light);
         }
 
-        /* Bio */
-        .bio-text p {
-            margin-bottom: 20px;
-            font-size: 1.05rem;
-            text-align: justify;
-        }
-
-        /* Timeline / Formación */
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .timeline-item {
+        .grid-cards {
             display: grid;
-            grid-template-columns: 100px 1fr;
-            background: var(--bg-main);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--brand);
-        }
-
-        section:nth-child(even) .timeline-item {
-            background: #ffffff;
-            border: 1px solid var(--border);
-            border-left: 4px solid var(--brand);
-        }
-
-        .tl-year {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--brand-light);
-        }
-
-        .tl-title {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 4px;
-        }
-
-        .tl-desc {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        /* Cifras */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
+            margin-top: 20px;
         }
 
-        .stat-card {
-            background: var(--bg-main);
-            border: 1px solid var(--border);
-            padding: 30px 20px;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .stat-num {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--brand);
-            margin-bottom: 5px;
-        }
-
-        .stat-txt {
-            font-size: 0.95rem;
-            color: var(--text-main);
-            font-weight: 500;
-        }
-
-        .stats-note {
-            text-align: right;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-top: 15px;
-        }
-
-        /* Investigación */
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-        }
-
-        .research-card {
-            background: #ffffff;
+        .card {
+            background: var(--bg-card);
             border: 1px solid var(--border);
             padding: 25px;
             border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
         }
 
-        .research-card h3 {
-            font-size: 1.15rem;
+        .card h3 {
             color: var(--brand);
             margin-bottom: 10px;
         }
 
-        .research-card p {
-            font-size: 0.95rem;
-            color: var(--text-main);
-        }
-
-        /* Publicaciones */
-        .pub-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .pub-item {
-            padding: 15px 20px;
-            background: var(--bg-main);
-            border-radius: 6px;
-            border-inline-start: 4px solid var(--brand-light);
-        }
-
-        .pub-text {
-            font-size: 0.95rem;
-            margin-bottom: 5px;
-        }
-
-        .pub-doi {
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
-        /* Cursos / Aprende haciendo */
-        .courses-ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .courses-ul li {
-            position: relative;
-            padding-left: 25px;
-            font-size: 1.05rem;
-        }
-
-        .courses-ul li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--brand-light);
-            font-weight: bold;
-        }
-
-        /* Footer */
         footer {
             background-color: #0f172a;
             color: #94a3b8;
-            padding: 60px 0 30px 0;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
         }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
+        @media (max-width: 768px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .nav-menu { display: none; }
         }
+    </style>
+</head>
+<body>
 
-        .footer-left h3 {
-            color: white;
-            font-size: 1.4rem;
-            margin-bottom: 5px;
-        }
+    <header>
+        <div class="container nav-wrapper">
+            <div class="nav-logo">Jonathan Gandin Calero</div>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
 
-        .footer-left p {
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-        }
+    <section id="inicio" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-subtitle">Ingeniero de Ciencias de la Computación</div>
+                <h1>Jonathan Gandin Calero Armijos</h1>
+                <div class="hero-uni">Consultor IA / Capacitador</div>
+                <div class="hero-tagline">
+                    "Transformando procesos y optimizando el futuro a través de la Inteligencia Artificial y la Ingeniería de Software."
+                </div>
+                <a href="#contacto" class="btn">Contáctame</a>
+            </div>
+        </div>
+    </section>
 
-        .footer-email {
-            font-size: 1.05rem;
-            font-weight: 600;
+    <section id="perfil">
+        <div class="container">
+            <h2 class="section-title">Sobre mí</h2>
+            <p>Soy profesional en Ciencias de la Computación especializado en el desarrollo de soluciones tecnológicas de vanguardia, consultoría estratégica en Inteligencia Artificial y capacitación técnica adaptada a las necesidades del entorno actual.</p>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="container">
+            <h2 class="section-title">Servicios Profesionales</h2>
+            <div class="grid-cards">
+                <div class="card">
+                    <h3><i class="fas fa-brain"></i> Consultoría IA</h3>
+                    <p>Integración y optimización de modelos de inteligencia artificial en flujos de trabajo empresariales y académicos.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-laptop-code"></i> Ingeniería de Software</h3>
+                    <p>Diseño, desarrollo e implementación de sistemas informáticos robustos, escalables y eficientes.</p>
+                </div>
+                <div class="card">
+                    <h3><i class="fas fa-chalkboard-teacher"></i> Capacitación</h3>
+                    <p>Talleres formativos orientados al uso ético y productivo de tecnologías emergentes y desarrollo técnico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container">
+            <p>&copy; 2026 Jonathan Gandin Calero Armijos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
