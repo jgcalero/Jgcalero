@@ -1,1 +1,417 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Gandin Calero Armijos | Ingeniero de Ciencias de la Computación / Consultor IA / Capacitador</title>
+    <!-- Iconos para redes académicas y profesionales -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 
+    <style>
+        :root {
+            --primary: #0f172a;
+            --brand: #1e3a8a;
+            --brand-light: #3b82f6;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+            --max-width: 1100px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
+            background-color: var(--bg-main);
+        }
+
+        a {
+            color: var(--brand-light);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--brand);
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navbar */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-menu a {
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-menu a:hover {
+            color: var(--brand-light);
+        }
+
+        .lang-selector {
+            display: flex;
+            gap: 8px;
+            border-left: 1px solid var(--border);
+            padding-left: 16px;
+            margin-left: 8px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .lang-selector a {
+            color: var(--text-muted);
+        }
+
+        .lang-selector a.active {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+
+        /* Hero */
+        .hero {
+            background-color: #ffffff;
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--brand-light);
+            margin-bottom: 5px;
+        }
+
+        .hero-uni {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .hero-tagline {
+            font-size: 1.15rem;
+            border-left: 4px solid var(--brand-light);
+            padding-left: 15px;
+            margin-bottom: 35px;
+            font-style: italic;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--brand);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--brand-light);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-main);
+            color: var(--primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--border);
+        }
+
+        .hero-img-box {
+            text-align: center;
+        }
+
+        .hero-img-box img {
+            width: 100%;
+            max-width: 340px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .img-caption {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+
+        /* Sections General */
+        section {
+            padding: 80px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        section:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--brand-light);
+        }
+
+        /* Bio */
+        .bio-text p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        /* Timeline / Formación */
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            background: var(--bg-main);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--brand);
+        }
+
+        section:nth-child(even) .timeline-item {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--brand);
+        }
+
+        .tl-year {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--brand-light);
+        }
+
+        .tl-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+
+        .tl-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Cifras */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            padding: 30px 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--brand);
+            margin-bottom: 5px;
+        }
+
+        .stat-txt {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .stats-note {
+            text-align: right;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 15px;
+        }
+
+        /* Investigación */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .research-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        .research-card h3 {
+            font-size: 1.15rem;
+            color: var(--brand);
+            margin-bottom: 10px;
+        }
+
+        .research-card p {
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        /* Publicaciones */
+        .pub-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .pub-item {
+            padding: 15px 20px;
+            background: var(--bg-main);
+            border-radius: 6px;
+            border-inline-start: 4px solid var(--brand-light);
+        }
+
+        .pub-text {
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .pub-doi {
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Cursos / Aprende haciendo */
+        .courses-ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .courses-ul li {
+            position: relative;
+            padding-left: 25px;
+            font-size: 1.05rem;
+        }
+
+        .courses-ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--brand-light);
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 60px 0 30px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-left h3 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+        }
+
+        .footer-left p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-email {
+            font-size: 1.05rem;
+            font-weight: 600;
